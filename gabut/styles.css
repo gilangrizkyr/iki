@@ -1,0 +1,43 @@
+.click-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.moving-text {
+  font-size: 24px;
+  color: #3498db;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.moving-text.clicked {
+  transform: scale(1.1);
+  color: #e74c3c;
+  animation: none;
+}
+
+.moving-text img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Untuk mengatur gambar ke tengah */
+  max-height: 70vh; /* Atur tinggi maksimum gambar sesuai kebutuhan */
+  width: auto;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
